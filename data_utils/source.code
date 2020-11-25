@@ -1,0 +1,10 @@
+protected void decrypt ( byte [ ] b , int off , int len , long fp ) { for ( int i = off ; i < off + len ; i ++ ) { b [ i ] = ( byte ) decrypt ( b [ i ] , fp ++ ) ; } }
+public int numGeneratedSequences ( ) { return gralComponents . size ( ) ; }
+public GammaDistr ( Random seed , int shape , double scale ) { this ( shape , scale ) ; numGen . reseedRandomGenerator ( seed . nextLong ( ) ) ; }
+public ZipfianGenerator ( long min , long max , double _zipfianconstant , double _zetan ) { items = max - min + NUM_ ; base = min ; zipfianconstant = _zipfianconstant ; theta = zipfianconstant ; zeta2theta = zeta ( NUM_ , theta ) ; alpha = NUM_ / ( NUM_ - theta ) ; zetan = _zetan ; countforzeta = items ; eta = ( NUM_ - Math . pow ( NUM_ / items , NUM_ - theta ) ) / ( NUM_ - zeta2theta / zetan ) ; nextInt ( ) ; }
+protected RemoteObject ( RemoteRef newref ) { ref = newref ; }
+void onDataChanged ( PickerFragment < ? > fragment ) ;
+public void cancelAll ( RequestFilter filter ) { synchronized ( mCurrentRequests ) { for ( Request < ? > request : mCurrentRequests ) { if ( filter . apply ( request ) ) { request . cancel ( ) ; } } } }
+public List < MarkerGroup > markers ( ) { return markers ; }
+void adjustSelection ( JEditorPane pane , HTMLDocument doc , int startOffset , int oldLength ) { int newLength = doc . getLength ( ) ; if ( newLength != oldLength && startOffset < newLength ) { if ( startOffset > NUM_ ) { String text ; try { text = doc . getText ( startOffset - NUM_ , NUM_ ) ; } catch ( BadLocationException ble ) { text = null ; } if ( text != null && text . length ( ) > NUM_ && text . charAt ( NUM_ ) == STR_ ) { pane . select ( startOffset , startOffset ) ; } else { pane . select ( startOffset + NUM_ , startOffset + NUM_ ) ; } } else { pane . select ( NUM_ , NUM_ ) ; } } }
+DecisionTableQuery decisionTableResourceNameLike ( String resourceNameLike ) ;

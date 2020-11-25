@@ -30,15 +30,24 @@ def get_ast(file_name, w):
         lines = f.readlines()
     with open(w, 'w+', encoding='utf-8') as wf:
         ign_cnt = 0
+        print('ppp',lines)
         for line in tqdm(lines):
+            print(line)
             code = line.strip()
             tokens = javalang.tokenizer.tokenize(code)
+            print('xx',tokens)
             token_list = list(javalang.tokenizer.tokenize(code))
+            print('xx',token_list)
             length = len(token_list)
+            print('xx',length)
             parser = javalang.parser.Parser(tokens)
+            print('xx',parser)
+            print('--->',parser.parse_member_declaration())
             try:
                 tree = parser.parse_member_declaration()
+                print('OOO')
             except (javalang.parser.JavaSyntaxError, IndexError, StopIteration, TypeError):
+                print('XXX')
                 print(code)
                 continue
             flatten = []
@@ -70,6 +79,7 @@ def get_ast(file_name, w):
                 if children:
                     d["children"] = children
                 value = None
+                print('TEM', node)
                 if hasattr(node, 'name'):
                     value = node.name
                 elif hasattr(node, 'value'):

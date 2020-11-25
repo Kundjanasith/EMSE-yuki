@@ -1,0 +1,31 @@
+start_line end_line method
+1 17 comment
+18 18 package
+19 19 empty
+20 20 import
+21 21 empty
+22 22 import
+23 23 import
+24 24 import
+25 25 import
+26 26 import
+27 27 import
+28 28 empty
+29 76 public class
+31 33 comment
+34 45 MethodDeclaration
+46 46 empty
+47 47 MethodInvocation
+48 48 empty
+49 52 MethodDeclaration
+53 53 empty
+54 75 private class
+56 56 MethodInvocation
+57 57 empty
+58 62 MethodDeclaration
+63 63 empty
+64 64 @Override
+65 68 MethodDeclaration
+69 69 empty
+70 70 @Override
+71 74 MethodDeclaration
