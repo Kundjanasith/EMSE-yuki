@@ -69,6 +69,15 @@ def checkMethodByLine(f,line):
                 break
         print(line+1,line+num_comments,'comment')
         return line+num_comments
+    elif '//' in f[line]:
+        num_comments = 0
+        for i in f[line:]:
+            if '//' in i:
+                num_comments = num_comments + 1
+            else:
+                break
+        print(line+1,line+num_comments,'comment')
+        return line+num_comments
     elif ';' in f[line]:
         if 'package' in f[line]:
             print(line+1,line+1,'package')
