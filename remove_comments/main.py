@@ -1,12 +1,27 @@
 file_input = open('result.txt','r').readlines()
 
+def find(str, ch):
+    for i, ltr in enumerate(str):
+        if ltr == ch:
+            yield i
+
 def removeComments(strx):
-    while '/*' in strx and '*/' in strx:
-        l_inx = strx.index('/*')
-        r_inx = strx.index('*/')
-        strx = strx[:l_inx] + strx[r_inx+2:]
+    strx = strx.split()
+    counter = 0
+    f = False
+    while counter < len(strx)-1:
+        # print(strx[counter],counter,f)
+        if strx[counter][:2]  == '/*':
+            f = True
+            strx[counter] = ''
+        if strx[counter][:2] == '*/':
+            f = False
+            strx[counter] = strx[counter].replace('*/','')
+        if f:
+            strx[counter] = ''
+        counter = counter + 1
+    strx = ' '.join([str(elem) for elem in strx])
     return strx
-    
 
 counter = 0
 for i in file_input:
