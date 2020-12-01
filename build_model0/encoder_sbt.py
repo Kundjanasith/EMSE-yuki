@@ -14,4 +14,5 @@ for i in sbt:
     # res = ','.join([str(elem) for elem in r]) 
     # output_file.write('['+str(res)+']\n')
 res = np.array(res)
+print(type(res[0][0]))
 np.savetxt('encoder/sbt.txt', res, delimiter=',') 
