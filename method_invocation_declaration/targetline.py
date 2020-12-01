@@ -116,4 +116,3 @@ for i in range(len(f)):
     counter = next_cursor
     
 
-        

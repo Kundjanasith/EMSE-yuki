@@ -18,7 +18,7 @@
 package org.apache.cassandra.utils.memory;
 
 import java.nio.ByteBuffer;
-
+//sd
 import org.apache.cassandra.db.Clustering;
 import org.apache.cassandra.db.Columns;
 import org.apache.cassandra.db.rows.BTreeRow;
@@ -37,7 +37,7 @@ public abstract class AbstractAllocator
         if (buffer.remaining() == 0)
             return ByteBufferUtil.EMPTY_BYTE_BUFFER;
         ByteBuffer cloned = allocate(buffer.remaining());
-
+        //sdasdsa
         cloned.mark();
         cloned.put(buffer.duplicate());
         cloned.reset();
